@@ -36,7 +36,7 @@
         <field name="inherit_id" ref="purchase.purchase_order_view_tree" />
         <field name="arch" type="xml">
             <field name="invoice_status" position="before">
-                <field name="reception_status" />
+                <field name="reception_status" widget="badge" optional="show" decoration-success="reception_status == 'received'" decoration-info="reception_status == 'partial'" decoration-warning="reception_status == 'no'"/>
             </field>
         </field>
     </record>
